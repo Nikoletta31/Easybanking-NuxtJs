@@ -1,0 +1,42 @@
+svg{
+    position:relative;
+}
+
+img{
+    position:absolute;
+    top:50;
+    left:0;
+    width:350px;
+    margin-left:12px;
+}
+
+.flex-header{
+    display:flex; 
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(245, 245, 245);
+}
+
+.text-header{
+    padding:40px;
+    text-align: center;
+    p{
+        padding:30px 0;
+        color:rgb(156, 156, 156);
+    }
+}
+
+.request-button {
+    font-size:15px;
+    color:white;
+    padding:15px 25px;
+    border-radius:30px;
+    font-weight:700;
+    background: rgb(70,199,108);
+background: linear-gradient(90deg, rgba(70,199,108,1) 10%, rgba(74,198,148,1) 52%, rgba(68,201,205,1) 90%);
+&:hover {
+    background: rgb(77,214,118);
+    background: linear-gradient(90deg, rgba(77,214,118,1) 10%, rgba(83,224,167,1) 52%, rgba(78,225,230,1) 90%);
+}
+   
+}

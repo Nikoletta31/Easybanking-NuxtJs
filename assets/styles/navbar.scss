@@ -7,7 +7,7 @@
     justify-content: center;
     width:80%;
     color:rgb(182, 182, 182);
-  
+ 
     @include mobile {
         margin-left:0;
         flex-direction: column;
@@ -16,7 +16,14 @@
 }
 
 p {
-    margin-left:10px;
+    margin-left:15px;
+    border-bottom: 3px solid rgb(255, 255, 255);
+    padding-bottom:10px;
+    &:hover{
+        border-bottom: 3px solid rgb(21, 179, 81);
+        
+        cursor: pointer;
+    }
 }
 
 .request-button {
@@ -25,15 +32,27 @@ p {
     padding:10px 20px;
     border-radius:20px;
     font-weight:700;
-    background: rgb(67,204,129);
-background: linear-gradient(90deg, rgba(67,204,129,1) 10%, rgba(74,199,110,1) 38%, rgba(68,150,205,1) 71%);
+    background: rgb(70,199,108);
+background: linear-gradient(90deg, rgba(70,199,108,1) 10%, rgba(74,198,148,1) 52%, rgba(68,201,205,1) 90%);
 &:hover {
-    background: rgb(143,238,186);
-    background: linear-gradient(90deg, rgba(143,238,186,1) 10%, rgba(153,240,178,1) 38%, rgba(97,199,233,1) 71%);
+    background: rgb(77,214,118);
+    background: linear-gradient(90deg, rgba(77,214,118,1) 10%, rgba(83,224,167,1) 52%, rgba(78,225,230,1) 90%);
 }
-   
+   @include mobile{
+       margin-bottom:10px;
+   }
 }
 
 button{
     border:none;
+}
+
+.fixed-top {
+    background-color:white;
+    padding-left: 50px;
+    padding-right:50px;
+    @include mobile {
+        padding-left:15px;
+        padding-right:15px;
+    }
 }
