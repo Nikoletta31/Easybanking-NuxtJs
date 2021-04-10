@@ -1,0 +1,39 @@
+@import "@/assets/styles/media.scss"; 
+
+.nav-links-text {
+    font-family: 'Public Sans', sans-serif;
+    display:flex; 
+    flex-direction: row;
+    justify-content: center;
+    width:80%;
+    color:rgb(182, 182, 182);
+  
+    @include mobile {
+        margin-left:0;
+        flex-direction: column;
+
+    }
+}
+
+p {
+    margin-left:10px;
+}
+
+.request-button {
+    font-size:12px;
+    color:white;
+    padding:10px 20px;
+    border-radius:20px;
+    font-weight:700;
+    background: rgb(67,204,129);
+background: linear-gradient(90deg, rgba(67,204,129,1) 10%, rgba(74,199,110,1) 38%, rgba(68,150,205,1) 71%);
+&:hover {
+    background: rgb(143,238,186);
+    background: linear-gradient(90deg, rgba(143,238,186,1) 10%, rgba(153,240,178,1) 38%, rgba(97,199,233,1) 71%);
+}
+   
+}
+
+button{
+    border:none;
+}
