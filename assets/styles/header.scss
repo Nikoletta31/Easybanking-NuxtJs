@@ -1,37 +1,98 @@
-svg{
+@import "@/assets/styles/media.scss";
+
+
+.images{
+    width:800px;
+    @include mobile{
+        width:100%;
+    }
+}
+
+.back-mobile{
+    display:none;
+    @include mobile {
+        display:block;
+        position:relative;
+    }
+}
+
+.back-desk{
     position:relative;
+    width:1500px;
+    top:-400px;
+    @include mobile {
+        display:none;
+    }
+
 }
 
 .image-mobile{
     position:absolute;
-    top:50;
-    left:0;
-    width:350px;
-    margin-left:12px;
+    top:-40px;
+    right:-100px;
+    @include mobile {
+         
+        top:50;
+        left:0;
+        width:350px;
+        margin-left:12px;
+    }
+  
 }
 
 .flex-header{
     display:flex; 
-    align-items: center;
-    flex-direction: column;
-    background-color: rgb(245, 245, 245);
+    flex-direction: row-reverse;
+    justify-content: center;
+   max-height:800px;
+    @include mobile {
+        min-height:800px;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    
 }
 
 .text-header{
-    padding:40px;
-    text-align: center;
+    padding-top:300px;
+    padding-left:150px;
+    @include mobile {
+        padding:40px;
+        text-align: center;
+    }
+  h2{
+      font-size:50px;
+      padding-bottom:20px;
+      @include mobile {
+          font-size:30px;
+      }
+  }
     p{
-        padding:30px 0;
         color:rgb(156, 156, 156);
+        @include mobile {
+            padding:30px 0;
+            
+        }
+       
     }
 }
 
 .header-two{
-    padding:40px;
-    text-align: center;
+    background-color: rgb(245, 245, 245);
+    margin:0;
+    @include mobile {
+        padding:40px;
+        text-align: center;
+       
+    }
+
     p{
-        padding:30px 0;
-        color:rgb(156, 156, 156);
+        @include mobile {
+            padding:20px 0 30px 0;
+            color:rgb(156, 156, 156);
+        }
+        
     } 
 }
 
@@ -43,6 +104,7 @@ svg{
     font-weight:700;
     background: rgb(70,199,108);
 background: linear-gradient(90deg, rgba(70,199,108,1) 10%, rgba(74,198,148,1) 52%, rgba(68,201,205,1) 90%);
+
 &:hover {
     background: rgb(77,214,118);
     background: linear-gradient(90deg, rgba(77,214,118,1) 10%, rgba(83,224,167,1) 52%, rgba(78,225,230,1) 90%);
@@ -50,13 +112,50 @@ background: linear-gradient(90deg, rgba(70,199,108,1) 10%, rgba(74,198,148,1) 52
    
 }
 
-.flex-card-items{
- display:flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
-    .icon-green {
-        width:80px;
-        
+.header-two-header{
+    padding:100px 0 100px 150px;
+    width:800px;
+    @include mobile {
+        padding:20px; 
+        width:100%;
     }
 }
+
+.flex-card-items{
+  display:flex; 
+ width:300px;
+  flex-direction: column;
+align-items: center;
+
+  margin:10px;
+  text-align: left;
+    @include mobile {
+      
+    }
+
+    .icon-green {
+        width:100px;
+        @include mobile {
+            width:80px;
+        }
+     
+ 
+    }
+}
+
+.flex-cards{
+    display:flex;
+    flex-direction: row;
+justify-content: center;
+@include mobile {
+    flex-direction: column;
+    align-items: center;
+}
+
+}
+
+ul { list-style: none;
+}
+
+
+   

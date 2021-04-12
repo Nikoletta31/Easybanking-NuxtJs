@@ -1,0 +1,64 @@
+@import "@/assets/styles/media.scss";
+
+h2{
+    @include mobile {
+        background-color: rgb(250, 250, 250);
+        text-align: center;
+        margin:0;
+        padding:40px;
+    }
+
+}
+
+.cards-blog {
+    @include mobile {
+        display:flex; 
+        align-items: center;
+        flex-direction: column;
+        background-color: rgb(250, 250, 250);
+        margin-bottom:40px;
+    }
+  
+    .card-blog-white{
+        @include mobile {
+            background-color: white;
+            margin:30px 20px;
+            width:320px;
+            border-radius: 5px;
+        }
+
+
+.author{ 
+    color:rgb(156, 156, 156);
+}
+h4{
+    @include mobile {
+        font-size:18px;
+        padding-bottom:10px;
+    }
+  
+}
+.text-parag{
+    color:rgb(156, 156, 156);
+   
+}
+    }
+  
+}
+
+img{
+    @include mobile {
+        width: 320px;
+        height: 200px;
+        object-fit: cover;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+  
+}
+
+ul{list-style: none;}
+li{margin-bottom:20px;}
+.card-content{
+    padding:20px;
+}

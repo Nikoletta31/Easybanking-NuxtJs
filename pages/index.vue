@@ -1,18 +1,24 @@
 <template>
-  <div class="container">
+  <div >
      <NavBar/>
     <Header/>
+    <Cards/>
+    <Footer/>
   </div>
 </template>
 
 <script>
 import NavBar from "@/components/NavBar.vue"
 import Header from "@/components/Header.vue"
+import Cards from "@/components/Cards.vue"
+import Footer from "@/components/Footer.vue"
 
 export default {
   components: {
     NavBar, 
-    Header
+    Header, 
+    Cards, 
+    Footer
   }
 }
 </script>

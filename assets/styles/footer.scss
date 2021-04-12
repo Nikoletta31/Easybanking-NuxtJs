@@ -1,0 +1,45 @@
+
+@import "@/assets/styles/media.scss";
+
+.request-button {
+    @include mobile {
+        font-size:15px;
+        color:white;
+        padding:15px 25px;
+        border-radius:30px;
+        font-weight:700;
+        margin:20px;
+        background: rgb(70,199,108);
+    background: linear-gradient(90deg, rgba(70,199,108,1) 10%, rgba(74,198,148,1) 52%, rgba(68,201,205,1) 90%);
+    }
+  
+&:hover {
+    background: rgb(77,214,118);
+    background: linear-gradient(90deg, rgba(77,214,118,1) 10%, rgba(83,224,167,1) 52%, rgba(78,225,230,1) 90%);
+}
+   
+}
+
+.footer-section {
+    @include mobile {
+        background-color:rgb(9, 35, 68);
+        color:white;
+        display:flex; 
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding:30px;
+    }
+
+    
+    }
+
+.logo-bank{
+    padding-bottom:20px;
+}
+
+img{
+    margin:5px;
+    padding-bottom:20px;
+}
+

@@ -2,9 +2,10 @@
     <div>
         <div class="flex-header">
 
-            <div>
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="375" height="423"><defs><linearGradient id="c" x1="0%" x2="99.58%" y1="36.139%" y2="63.745%"><stop offset="0%" stop-color="#33D35E"/><stop offset="100%" stop-color="#2AB6D9"/></linearGradient><filter id="a" width="116.9%" height="158.7%" x="-10.8%" y="-28.8%" filterUnits="objectBoundingBox"><feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/><feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="38.5"/><feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.0240111451 0"/></filter><path id="b" d="M42.46 162.61l70.744 70.76a100 100 0 0070.719 29.298h11.03a100 100 0 0170.719 29.298l75.718 75.736A100 100 0 00412.109 397H633.78c27.507 0 49.805-22.299 49.805-49.805a49.805 49.805 0 00-14.583-35.213l-52.835-52.848c-7.359-7.36-7.357-19.294.003-26.653a18.846 18.846 0 0113.325-5.518c10.408 0 18.846-8.438 18.846-18.846 0-4.997-1.985-9.79-5.518-13.325L534.747 86.691a100 100 0 00-70.72-29.298H352.013a97.948 97.948 0 01-69.267-28.696A97.948 97.948 0 00213.477 0H84.94c-19.435 0-35.19 15.755-35.19 35.19a35.19 35.19 0 0010.304 24.88L77.65 77.669c9.715 9.717 9.713 25.47-.004 35.185a24.88 24.88 0 01-17.59 7.285c-13.742 0-24.88 11.14-24.88 24.88a24.88 24.88 0 007.284 17.59z"/></defs><g fill="none" fill-rule="evenodd" transform="translate(-94 -52)"><use fill="#000" filter="url(#a)" xlink:href="#b"/><use fill="#2D314D" xlink:href="#b"/><path fill="url(#c)" d="M256.46 163.61l70.744 70.76a100 100 0 0070.719 29.298h11.03a100 100 0 0170.719 29.298l75.718 75.736A100 100 0 00626.109 398H847.78c27.507 0 49.805-22.299 49.805-49.805a49.805 49.805 0 00-14.583-35.213l-52.835-52.848c-7.359-7.36-7.357-19.294.003-26.653a18.846 18.846 0 0113.325-5.518c10.408 0 18.846-8.438 18.846-18.846 0-4.997-1.985-9.79-5.518-13.325L748.747 87.691a100 100 0 00-70.72-29.298H566.013a97.948 97.948 0 01-69.267-28.696A97.948 97.948 0 00427.477 1H298.94c-19.435 0-35.19 15.755-35.19 35.19a35.19 35.19 0 0010.304 24.88l17.595 17.599c9.715 9.717 9.713 25.47-.004 35.185a24.88 24.88 0 01-17.59 7.285c-13.742 0-24.88 11.14-24.88 24.88a24.88 24.88 0 007.284 17.59z"/></g></svg>
-    <img class="image-mobile" src="@/assets/image-mockups.png" />
+            <div class="images">
+                <img class="back-mobile" src="@/assets/bg-intro-mobile.svg"/>
+     <img class="back-desk" src="@/assets/bg-intro-desktop.svg"/>
+         <img class="image-mobile" src="@/assets/image-mockups.png" />
             </div>
 
             <div class="text-header">
@@ -15,19 +16,24 @@
     </div>
 
 <div class="header-two">
-<div>
+<div class="header-two-header">
     <h2>Why choose Easybank?</h2>
     <p>We leverage Open Banking to turn your bank account into your financial hub. Control your finances like never before.</p>
 </div>
 
 <div class="flex-cards">
+<ul  v-for="card in cards" :key="card.index">
+    
+    <li>
     <div class="flex-card-items">
- <img class="icon-green" src="@/assets/icon-online.svg" /><br>
- <h3>Online banking</h3>
- <p> Our modern web and mobile applications allow you to keep track of your finances wherever you are in the world.</p>
+ <img class="icon-green" :src="card.image" /><br>
+ <h3>{{card.title}}</h3>
+ <p>{{card.subtitle}} </p>
 </div>
-
-</div>
+    </li>
+ 
+</ul>
+   </div>
 
 </div>
 
@@ -35,8 +41,39 @@
 </template>
 
 <script>
+import online from "@/assets/icon-online.svg"; 
+import budgeting from "@/assets/icon-budgeting.svg"; 
+import onboarding from "@/assets/icon-onboarding.svg"; 
+import apis from "@/assets/icon-api.svg"; 
+
 export default {
-    name:"Header"
+    name:"Header", 
+    data(){
+        return{
+            cards:[
+                {
+                    title: "Online banking", 
+                    subtitle: "Our modern web and mobile applications allow you to keep track of your finances wherever you are in the world.", 
+                    image: online,
+                },
+                   {
+                    title: "Simple Budgeting", 
+                    subtitle: "See exactly where your money goes each month. Receive notifications when you’re close to hitting your limits.", 
+                    image: budgeting,
+                },
+                     {
+                    title: "Fast Onboarding", 
+                    subtitle: "We don’t do branches. Open your account in minutes online and start taking control of your finances right away.", 
+                    image: onboarding,
+                },
+                     {
+                    title: "Open API", 
+                    subtitle: "Manage your savings, investments, pension, and much more from one account. Tracking your money has never been easier.", 
+                    image: apis,
+                },
+            ]
+        }
+    }
 }
 </script>
 
