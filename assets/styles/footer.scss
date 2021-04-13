@@ -2,15 +2,16 @@
 @import "@/assets/styles/media.scss";
 
 .request-button {
+    font-size:15px;
+    color:white;
+    padding:15px 25px;
+    border-radius:30px;
+    font-weight:700;
+    margin:20px;
+    background: rgb(70,199,108);
+background: linear-gradient(90deg, rgba(70,199,108,1) 10%, rgba(74,198,148,1) 52%, rgba(68,201,205,1) 90%);
     @include mobile {
-        font-size:15px;
-        color:white;
-        padding:15px 25px;
-        border-radius:30px;
-        font-weight:700;
-        margin:20px;
-        background: rgb(70,199,108);
-    background: linear-gradient(90deg, rgba(70,199,108,1) 10%, rgba(74,198,148,1) 52%, rgba(68,201,205,1) 90%);
+ 
     }
   
 &:hover {
@@ -21,10 +22,14 @@
 }
 
 .footer-section {
+    background-color:rgb(9, 35, 68);
+    color:white;
+    display:flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    padding:40px 100px;
     @include mobile {
-        background-color:rgb(9, 35, 68);
-        color:white;
-        display:flex; 
+     
         flex-direction: column;
         align-items: center;
         text-align: center;
@@ -43,3 +48,23 @@ img{
     padding-bottom:20px;
 }
 
+.flex-links {
+    display:flex; 
+    flex-direction:row;
+    justify-content: space-between;
+    .links{
+        margin:0 40px;
+    }
+    @include mobile {
+        flex-direction: column;
+    }
+}
+
+.button-rights{
+    display:flex; 
+    flex-direction: column;
+    align-items: flex-end;
+    @include mobile {
+        align-items:center;
+    }
+}

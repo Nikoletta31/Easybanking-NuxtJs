@@ -13,6 +13,8 @@
     @include mobile {
         display:block;
         position:relative;
+        width:100%;
+     
     }
 }
 
@@ -33,9 +35,9 @@
     @include mobile {
          
         top:50;
-        left:0;
+        left:5%;
         width:350px;
-        margin-left:12px;
+      
     }
   
 }
@@ -56,7 +58,7 @@
 
 .text-header{
     padding-top:300px;
-    padding-left:150px;
+    padding-left:100px;
     @include mobile {
         padding:40px;
         text-align: center;
@@ -81,6 +83,7 @@
 .header-two{
     background-color: rgb(245, 245, 245);
     margin:0;
+    padding-bottom:60px;
     @include mobile {
         padding:40px;
         text-align: center;
@@ -88,9 +91,10 @@
     }
 
     p{
+        color:rgb(156, 156, 156);
         @include mobile {
             padding:20px 0 30px 0;
-            color:rgb(156, 156, 156);
+          
         }
         
     } 
@@ -113,7 +117,7 @@ background: linear-gradient(90deg, rgba(70,199,108,1) 10%, rgba(74,198,148,1) 52
 }
 
 .header-two-header{
-    padding:100px 0 100px 150px;
+    padding:100px 0 70px 100px;
     width:800px;
     @include mobile {
         padding:20px; 
@@ -123,18 +127,16 @@ background: linear-gradient(90deg, rgba(70,199,108,1) 10%, rgba(74,198,148,1) 52
 
 .flex-card-items{
   display:flex; 
- width:300px;
+ width:270px;
   flex-direction: column;
-align-items: center;
-
   margin:10px;
   text-align: left;
     @include mobile {
-      
+      align-items: center;
     }
 
     .icon-green {
-        width:100px;
+        width:80px;
         @include mobile {
             width:80px;
         }
@@ -146,7 +148,8 @@ align-items: center;
 .flex-cards{
     display:flex;
     flex-direction: row;
-justify-content: center;
+    justify-content: space-between;
+    margin:0px 80px;
 @include mobile {
     flex-direction: column;
     align-items: center;
@@ -156,6 +159,8 @@ justify-content: center;
 
 ul { list-style: none;
 }
+
+
 
 
    

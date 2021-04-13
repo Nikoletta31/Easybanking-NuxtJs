@@ -11,12 +11,12 @@
         </div>
 
 <div class="flex-links">
-    <div>
+    <div class="links">
         <p>About</p>
          <p>Contact</p>
           <p>Blog</p>
     </div>
-     <div>
+     <div class="links">
         <p>Careers</p>
         <p>Support</p>
         <p>Private Policy</p>

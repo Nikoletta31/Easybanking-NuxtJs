@@ -27,6 +27,7 @@
     <li>
     <div class="flex-card-items">
  <img class="icon-green" :src="card.image" /><br>
+ 
  <h3>{{card.title}}</h3>
  <p>{{card.subtitle}} </p>
 </div>

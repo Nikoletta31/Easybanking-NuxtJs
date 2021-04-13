@@ -1,37 +1,57 @@
 @import "@/assets/styles/media.scss";
 
 h2{
+    background-color: rgb(250, 250, 250);
+    padding:60px 100px 30px 100px;
+    margin:0;
     @include mobile {
-        background-color: rgb(250, 250, 250);
+       
         text-align: center;
-        margin:0;
         padding:40px;
     }
 
 }
 
-.cards-blog {
-    @include mobile {
-        display:flex; 
+
+.card-blog {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(250, 250, 250);
+       @include mobile {
         align-items: center;
         flex-direction: column;
-        background-color: rgb(250, 250, 250);
         margin-bottom:40px;
     }
+}
+
+.cards-blog {
+ padding:10px 80px 40px 80px;
+ background-color: rgb(250, 250, 250);
+ @include mobile {
+     padding:10px 20px;
+ }
   
     .card-blog-white{
+        background-color: white;
+        width:270px;
+        border-radius: 5px;
         @include mobile {
-            background-color: white;
-            margin:30px 20px;
             width:320px;
-            border-radius: 5px;
+            margin:30px 20px;
+          
         }
 
 
 .author{ 
+    font-size:13px;
     color:rgb(156, 156, 156);
+    @include mobile {
+        font-size:15px;
+    }
 }
 h4{
+    font-size:20px;
     @include mobile {
         font-size:18px;
         padding-bottom:10px;
@@ -39,6 +59,7 @@ h4{
   
 }
 .text-parag{
+    font-size:14px;
     color:rgb(156, 156, 156);
    
 }
@@ -47,18 +68,25 @@ h4{
 }
 
 img{
+    width: 270px;
+    height: 150px;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     @include mobile {
         width: 320px;
         height: 200px;
-        object-fit: cover;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
     }
   
 }
 
 ul{list-style: none;}
-li{margin-bottom:20px;}
+li{
+    margin:20px;
+    @include mobile {
+        margin:20px 0;
+    }
+   }
 .card-content{
     padding:20px;
 }
